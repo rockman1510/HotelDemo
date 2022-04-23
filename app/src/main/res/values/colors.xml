@@ -10,10 +10,12 @@
 
     <color name="red">#A80B0B</color>
     <color name="red_dark">#950505</color>
+    <color name="yellow">#62EF0A</color>
     <color name="pink">#E41D8A</color>
     <color name="pink_dark">#A50A5F</color>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="bg_dialog">#FFFFFFFF</color>
+    <color name="colorTextContent">#4A4545</color>
 </resources>

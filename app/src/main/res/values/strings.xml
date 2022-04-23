@@ -8,4 +8,30 @@
     <string name="please_wait">Please wait...!</string>
     <string name="error">Error</string>
     <string name="search_msg">Let search here...</string>
+    <string name="reserve">Reserve</string>
+    <string name="clear_all">Clear All</string>
+
+    <string name="generic_stars">Stars: %s - %s</string>
+    <string name="generic_ratings">Ratings: %s - %s</string>
+    <string name="generic_price">Price (%s): %s - %s</string>
+
+    <string name="sort_by">Sort By</string>
+    <string name="sort_default">Default</string>
+    <string name="star_down">Stars (5 to 0)</string>
+    <string name="star_up">Stars (0 to 5)</string>
+    <string name="rating_down">Ratings (10 to 0)</string>
+    <string name="rating_up">Ratings (10 to 0)</string>
+    <string name="price_down">Price (high to low)</string>
+    <string name="price_up">Price (low to high)</string>
+
+    <string name="google_api_key">AIzaSyDgyxFb328RylPmkplZrz7CMIKKCJXyFw8</string>
+
+    <array name="initial_slider_values">
+        <item>2</item>
+        <item>4</item>
+    </array>
+    <array name="initial_price_slider_values">
+        <item>100</item>
+        <item>200</item>
+    </array>
 </resources>
