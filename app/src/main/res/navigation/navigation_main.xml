@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@+id/navigation_list_hotel">
+
+    <fragment
+        android:id="@+id/navigation_list_hotel"
+        android:name="com.lastminute.hoteldemo.ui.list.HotelListFragment"
+        android:label="@string/hotel"
+        tools:layout="@layout/fragment_list_hotel">
+        <action
+            android:id="@+id/go_to_detail"
+            app:destination="@id/navigation_detail_hotel" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail_hotel"
+        android:name="com.lastminute.hoteldemo.ui.detail.HotelDetailFragment"
+        android:label="@string/hotel"
+        tools:layout="@layout/fragment_detail_hotel">
+        <argument
+            android:name="hotel"
+            app:argType="com.lastminute.hoteldemo.api.model.Hotel" />
+    </fragment>
+
+</navigation>
