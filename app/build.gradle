@@ -16,7 +16,6 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "com.lastminute.hoteldemo.AppTestRunner"
     }
 
@@ -40,7 +39,6 @@ android {
         jvmTarget = '11'
     }
     buildFeatures {
-//        viewBinding = true
         dataBinding true
     }
 }
@@ -90,8 +88,6 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:$glideVer"
 
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
-
-//    implementation "androidx.datastore:datastore-preferences:1.0.0"
 
     implementation("androidx.room:room-runtime:$roomVersion")
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
