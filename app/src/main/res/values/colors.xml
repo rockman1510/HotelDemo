@@ -13,6 +13,7 @@
     <color name="yellow">#62EF0A</color>
     <color name="pink">#E41D8A</color>
     <color name="pink_dark">#A50A5F</color>
+    <color name="filter_text_bg">#4DE6519C</color>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>

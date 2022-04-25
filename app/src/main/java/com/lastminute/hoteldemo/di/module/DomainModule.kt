@@ -1,6 +1,5 @@
 package com.lastminute.hoteldemo.di.module
 
-import com.lastminute.hoteldemo.base.CoroutinesDispatcherProvider
 import com.lastminute.hoteldemo.domain.HotelListUseCase
 import com.lastminute.hoteldemo.repository.HotelListRepository
 import dagger.Module
@@ -14,7 +13,6 @@ import dagger.hilt.components.SingletonComponent
 class DomainModule {
     @Provides
     fun provideHotelListUseCase(
-        hotelListRepository: HotelListRepository,
-        dispatcherProvider: CoroutinesDispatcherProvider
-    ): HotelListUseCase = HotelListUseCase(hotelListRepository, dispatcherProvider)
+        hotelListRepository: HotelListRepository
+    ): HotelListUseCase = HotelListUseCase(hotelListRepository)
 }

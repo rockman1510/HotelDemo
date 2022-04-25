@@ -3,50 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/ivFilter"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/ic_filter"
-            android:backgroundTint="@color/pink"
-            app:layout_constraintEnd_toStartOf="@id/ivSort"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:gravity="end"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/ivFilter"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_filter"
+                app:layout_constraintEnd_toStartOf="@id/ivSort"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/ivSort"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_sort"
-            android:backgroundTint="@color/pink"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/ivSort"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_sort"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvFilter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivFilter" />
+            android:adapter="@{hotelFilterAdapter}" />
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rvFilter">
+            android:layout_height="wrap_content">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvHotel"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:adapter="@{hotelAdapter}" />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="hotelAdapter"
+            type="com.lastminute.hoteldemo.ui.list.HotelAdapter" />
+
+        <variable
+            name="hotelFilterAdapter"
+            type="com.lastminute.hoteldemo.ui.list.HotelFilterAdapter" />
+    </data>
 </layout>

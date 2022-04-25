@@ -17,7 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.lastminute.hoteldemo.AppTestRunner"
     }
 
     buildTypes {
@@ -58,6 +58,7 @@ ext {
     navigationVer = "2.4.1"
     swiperefreshlayoutVer = "1.1.0"
     moshiVer = "1.13.0"
+    roomVersion = "2.4.0"
 }
 
 dependencies {
@@ -90,6 +91,16 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
 
+//    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+//    //RxJava2 support for Room
+//    implementation("androidx.room:room-rxjava2:$roomVersion")
+    //Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$roomVersion")
+    testImplementation("androidx.room:room-testing:$roomVersion")
 
 
 //retrofit

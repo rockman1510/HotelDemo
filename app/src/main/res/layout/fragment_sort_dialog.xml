@@ -43,16 +43,13 @@
                     android:id="@+id/rbDefault"
                     android:layout_width="match_parent"
                     android:text="@string/sort_default"
-                    android:textIsSelectable="true"
                     android:layoutDirection="rtl"
-                    android:checked="true"
                     android:layout_height="wrap_content"/>
 
                 <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/rbStarDown"
                     android:layout_width="match_parent"
                     android:text="@string/star_down"
-                    android:textIsSelectable="true"
                     android:layoutDirection="rtl"
                     android:layout_height="wrap_content"/>
 

@@ -28,6 +28,7 @@
                 android:background="@color/teal_700"/>
 
             <ImageView
+                android:id="@+id/iv_close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleX="1.2"
@@ -37,47 +38,47 @@
                 android:src="@drawable/ic_close"/>
 
                 <TextView
+                    android:id="@+id/tvStar"
                     style="@style/TextTitle"
                     android:layout_marginTop="30dp"
-                    android:layout_width="wrap_content"
-                    android:text="@string/generic_stars" />
+                    android:layout_width="wrap_content" />
 
                 <com.google.android.material.slider.RangeSlider
                     android:id="@+id/rsStar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:stepSize="1"
+                    android:backgroundTint="@color/pink"
                     android:valueFrom="0"
-                    android:valueTo="5"
-                    app:values="@array/initial_slider_values" />
+                    android:valueTo="5" />
 
                 <TextView
+                    android:id="@+id/tvRating"
                     style="@style/TextTitle"
-                    android:layout_width="match_parent"
-                    android:text="@string/generic_ratings" />
-                <com.google.android.material.slider.RangeSlider
+                    android:layout_width="match_parent" />
 
+                <com.google.android.material.slider.RangeSlider
                     android:id="@+id/rsRating"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:stepSize="0.2"
                     android:valueFrom="0.0"
-                    android:valueTo="10.0"
-                    app:values="@array/initial_slider_values" />
+                    android:backgroundTint="@color/pink"
+                    android:valueTo="10.0" />
 
                     <TextView
+                        android:id="@+id/tvPrice"
                         style="@style/TextTitle"
-                        android:layout_width="wrap_content"
-                        android:text="@string/generic_price" />
+                        android:layout_width="wrap_content" />
 
                 <com.google.android.material.slider.RangeSlider
                     android:id="@+id/rsPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:valueFrom="10"
+                    android:backgroundTint="@color/pink"
                     android:valueTo="1000"
-                    android:stepSize="5"
-                    app:values="@array/initial_price_slider_values" />
+                    android:stepSize="5" />
 
             <LinearLayout
                 android:id="@+id/llBottom"

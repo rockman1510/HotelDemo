@@ -3,6 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <import type="com.lastminute.hoteldemo.utils.StringUtils"/>
+
+        <variable
+            name="hotel"
+            type="com.lastminute.hoteldemo.api.model.Hotel" />
+        <variable
+            name="selectedListener"
+            type="com.lastminute.hoteldemo.ui.list.HotelSelectedListener" />
+    </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,68 +28,79 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> selectedListener.onSelectedHotel(hotel)}"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/ivImage"
                 android:layout_width="0dp"
                 android:layout_height="140dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
                 android:layout_weight="3"
-                android:src="@drawable/no_image_available" />
+                imageUrl="@{hotel.gallery[0]}" />
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="140dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:layout_weight="7"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tvName"
-                    style="@style/TextHeader" />
+                    style="@style/TextHeader"
+                    android:text="@{hotel.name}"/>
                 <RatingBar
                     android:id="@+id/rbStar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="?android:attr/ratingBarStyleSmall"
                     android:numStars="5"
+                    android:rating="@{hotel.stars}"
                     android:progressTint="@color/yellow" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/tvRating"
                         style="@style/TextSubHeader"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:gravity="center"
+                        android:text="@{String.valueOf(hotel.userRating)}"
                         android:background="@drawable/shape_textview_bg"
                         android:textColor="@color/white"/>
 
                     <TextView
                         android:id="@+id/tvRatingText"
                         android:layout_marginStart="10dp"
+                        android:text="@{StringUtils.ratingToText(hotel.userRating, context)}"
                         style="@style/TextContent"/>
 
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tvAddress"
-                    android:drawableLeft="@drawable/ic_map"
-                    style="@style/TextContent" />
+                    android:layout_marginTop="5dp"
+                    android:text="@{StringUtils.convertAddress(hotel.location)}"
+                    style="@style/TextContent"
+                    app:drawableLeftCompat="@drawable/ic_map" />
                 <TextView
                     android:id="@+id/tvPrice"
                     android:layout_gravity="end"
+                    android:text="@{StringUtils.convertPrice(hotel.price, hotel.currency)}"
                     style="@style/TextSubHeader"/>
             </LinearLayout>
         </LinearLayout>
-
-
     </androidx.cardview.widget.CardView>
 </layout>

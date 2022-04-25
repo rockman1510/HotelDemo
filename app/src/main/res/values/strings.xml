@@ -1,4 +1,12 @@
 <resources>
+    <array name="initial_slider_values">
+        <item>2</item>
+        <item>4</item>
+    </array>
+    <array name="initial_price_slider_values">
+        <item>100</item>
+        <item>200</item>
+    </array>
     <string name="app_name">HotelDemo</string>
     <string name="hotel">Hotel</string>
     <string name="close">Close</string>
@@ -8,13 +16,21 @@
     <string name="please_wait">Please wait...!</string>
     <string name="error">Error</string>
     <string name="search_msg">Let search here...</string>
+    <string name="filter">Filter</string>
+    <string name="filters">Filters:</string>
+    <string name="sort">Sort</string>
+    <string name="generic_sort">Sort: %s</string>
+    <string name="schedule">Schedule</string>
+    <string name="contact">Contact</string>
     <string name="reserve">Reserve</string>
     <string name="clear_all">Clear All</string>
-
     <string name="generic_stars">Stars: %s - %s</string>
     <string name="generic_ratings">Ratings: %s - %s</string>
     <string name="generic_price">Price (%s): %s - %s</string>
+    <string name="generic_price_night">%s %s / night</string>
 
+    <string name="generic_check_in">Check In: %s - %s</string>
+    <string name="generic_check_out">Check Out: %s - %s</string>
     <string name="sort_by">Sort By</string>
     <string name="sort_default">Default</string>
     <string name="star_down">Stars (5 to 0)</string>
@@ -23,15 +39,14 @@
     <string name="rating_up">Ratings (10 to 0)</string>
     <string name="price_down">Price (high to low)</string>
     <string name="price_up">Price (low to high)</string>
-
     <string name="google_api_key">AIzaSyDgyxFb328RylPmkplZrz7CMIKKCJXyFw8</string>
+    <string name="very_bad">Very Bad</string>
+    <string name="bad">Bad</string>
+    <string name="good">Good</string>
+    <string name="very_good">Very Good</string>
+    <string name="excellent">Excellent</string>
+    <string name="error_occur_msg">There is an error occur\nPlease try again!</string>
+    <string name="no_data_msg">There is no data!</string>
+    <string name="under_development_msg">This function is under development!</string>
 
-    <array name="initial_slider_values">
-        <item>2</item>
-        <item>4</item>
-    </array>
-    <array name="initial_price_slider_values">
-        <item>100</item>
-        <item>200</item>
-    </array>
 </resources>
