@@ -41,15 +41,6 @@ object StringUtils {
         return "$currency $price"
     }
 
-    @JvmStatic
-    fun generateGoogleMapString(
-        lat: Double, long: Double, zoom: Int, size: Int, context: Context
-    ): String {
-        return "http://maps.google.com/maps/api/staticmap?center=$lat,$long" +
-                "&zoom=$zoom&size=${size}x${size}&sensor=false&key=" +
-                context.getString(R.string.google_api_key)
-    }
-
     @SuppressLint("StringFormatMatches")
     @JvmStatic
     fun convertFilterHotelString(

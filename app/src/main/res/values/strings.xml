@@ -39,7 +39,6 @@
     <string name="rating_up">Ratings (10 to 0)</string>
     <string name="price_down">Price (high to low)</string>
     <string name="price_up">Price (low to high)</string>
-    <string name="google_api_key">AIzaSyDgyxFb328RylPmkplZrz7CMIKKCJXyFw8</string>
     <string name="very_bad">Very Bad</string>
     <string name="bad">Bad</string>
     <string name="good">Good</string>
